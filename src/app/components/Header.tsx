@@ -1,12 +1,18 @@
+import { Input } from "./ui/input";
+
 const Header = () => {
   return (
     <>
-      <header className="h-28 w-full flex justify-between px-24 items-center">
+      <header className="h-28 w-full flex justify-between px-24 items-center gap-12">
         <div>
           <img src="/Clothes-Store-logo.svg" alt="Clothes Store" />
         </div>
 
         <ul className="flex gap-12 items-center">
+          <li>
+            <Input className="" />
+          </li>
+
           <li>Shop</li>
 
           <li>Who we are</li>
