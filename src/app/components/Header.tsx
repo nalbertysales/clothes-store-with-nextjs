@@ -1,3 +1,5 @@
+import { Search } from "lucide-react";
+import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 
 const Header = () => {
@@ -9,8 +11,16 @@ const Header = () => {
         </div>
 
         <ul className="flex gap-12 items-center">
-          <li>
-            <Input className="" />
+          <li className="flex border rounded-lg">
+            <Input className="border-none shadow-none focus-visible:border-none focus-visible:ring-0" />
+
+            <Button
+              className="border-none shadow-none"
+              variant="outline"
+              size="icon"
+            >
+              <Search />
+            </Button>
           </li>
 
           <li>Shop</li>
