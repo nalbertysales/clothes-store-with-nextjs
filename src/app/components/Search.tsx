@@ -1,12 +1,19 @@
 const Search = () => {
+  const categories = [
+    "Woman",
+    "Man",
+    "Kids",
+    "Jeans",
+    "Shoes",
+    "Sports",
+    "Winter",
+  ];
+
   return (
     <ul className="flex gap-48 justify-center pt-4">
-      <li>Woman</li>
-      <li>Man</li>
-      <li>Kids</li>
-      <li>Jeans</li>
-      <li>Shoes</li>
-      <li>Sports</li>
+      {categories.map((category) => (
+        <li className="hover:bg-cyan-300 p-2 rounded-md">{category}</li>
+      ))}
     </ul>
   );
 };
