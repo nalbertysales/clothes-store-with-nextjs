@@ -1,4 +1,4 @@
-import { Search, ShoppingBag } from "lucide-react";
+import { Search, ShoppingBag, UserRound } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 
@@ -19,17 +19,28 @@ const list = [
       </>
     ),
   },
-  { content: "Shop", className: "hover:bg-slate-300 p-2 rounded-md" },
-  { content: "Who we are", className: "hover:bg-slate-300 p-2 rounded-md" },
-  { content: "My profile", className: "hover:bg-slate-300 p-2 rounded-md" },
+  { content: "Shop", className: "hover:bg-slate-200 p-2 rounded-md" },
+  { content: "Contact", className: "hover:bg-slate-200 p-2 rounded-md" },
+
   {
     content: (
       <Button
-        className="border-none shadow-none hover:bg-slate-300 w-16 h-12"
+        className="border-none shadow-none hover:bg-slate-200 w-14 h-10"
         variant="outline"
         size="icon"
       >
         <ShoppingBag />
+      </Button>
+    ),
+  },
+  {
+    content: (
+      <Button
+        className="border-black rounded-full hover:bg-slate-200 w-10 h-10"
+        variant="outline"
+        size="icon"
+      >
+        <UserRound />
       </Button>
     ),
   },
@@ -45,7 +56,7 @@ const Header = () => {
             className="max-w-[354px]"
           />
 
-          <ul className="flex gap-14 items-center">
+          <ul className="flex gap-5 items-center">
             {list.map((item) => (
               <li className={item.className ? item.className : ""}>
                 {item.content}
